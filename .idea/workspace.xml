@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4e576a6f-c3bb-4e12-81e0-56367416f521" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/features/UItest/UItest.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/UItest/UI_Testing_EC_Cargo_Test.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/seleniumgluecode/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/seleniumgluecode/UI_Testing_EC_Cargo_Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/seleniumgluecode/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/seleniumgluecode/Hooks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/seleniumgluecode/UI_Testing_EC_Cargo_Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/seleniumgluecode/UI_Testing_EC_Cargo_Test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +20,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -194,21 +195,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <condition expression="&quot;Cucumber+&quot;!=null" />
-          <url>file://$PROJECT_DIR$/src/test/java/seleniumgluecode/UI_Testing_EC_Cargo_Test.java</url>
-          <line>28</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <condition expression="&quot;Cucumber+&quot;!=null" />
-          <url>file://$PROJECT_DIR$/src/test/java/seleniumgluecode/UI_Testing_EC_Cargo_Test.java</url>
-          <line>39</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="tzatziki.gherkin.step">
-          <url>file://$PROJECT_DIR$/src/test/java/features/UItest/UI_Testing_EC_Cargo_Test.feature</url>
-          <line>6</line>
-          <option name="timeStamp" value="3" />
+          <url>file://$PROJECT_DIR$/src/test/java/runner/browserManager/FirefoxDriverManager.java</url>
+          <line>8</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

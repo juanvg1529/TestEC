@@ -5,24 +5,26 @@ import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import pom.LoginPage;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class UI_Testing_EC_Cargo_Test {
+public class UI_Testing_EC_Cargo_Test extends BaseTest{
 
-    private ChromeDriver driver = Hooks.getDriver();
+
     @Given("the user is at the SwagLabs home page")
     public void the_user_is_at_the_SwagLabs_home_page() {
-        String titleHomePage= "Swag Labs";
-        Assert.assertEquals(titleHomePage,driver.getTitle());
+
+        Assert.assertEquals(loginPage.getTitleLoginPage(),driver.getTitle());
         // Write code here that turns the phrase above into concrete actions
     }
     @Given("the user select the option to log in")
     public void the_user_select_the_option_to_log_in() {
-        WebElement loginCredentials = driver.findElement(By.id("login_credentials"));
+        WebElement loginCredentials = driver.findElement(loginPage.getLoginCredentials());
         var password =loginCredentials.getText();
         String[] parts = password.split("\n");
         List<String> usernames = new ArrayList<>();
