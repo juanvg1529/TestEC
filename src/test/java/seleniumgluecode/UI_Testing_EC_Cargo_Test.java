@@ -3,25 +3,22 @@ package seleniumgluecode;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
-public class Test {
+public class UI_Testing_EC_Cargo_Test {
 
-    private ChromeDriver driver;
+    private ChromeDriver driver = Hooks.getDriver();
     @Given("the user is at the SwagLabs home page")
     public void the_user_is_at_the_SwagLabs_home_page() {
+        String titleHomePage= "Swag Labs";
+        Assert.assertEquals(titleHomePage,driver.getTitle());
         // Write code here that turns the phrase above into concrete actions
-        System.setProperty("webdriver.chrome.driver","./src/test/resources/chromedriver/chromedriver.exe");
-        driver = new ChromeDriver();
-        driver.get("https://www.saucedemo.com");
-        driver.manage().window().maximize();
-
     }
     @Given("the user select the option to log in")
     public void the_user_select_the_option_to_log_in() {
@@ -36,7 +33,8 @@ public class Test {
                 usernames.add(part);
             }
         }
-        Optional<String> usernameSelected = usernames.stream().filter(username->username.contains("user")).findAny();
+        String usernameSelected = usernames.stream().filter(username->username.contains("user")).findAny().orElseThrow(() ->new RuntimeException("Not user found"));
+        Assert.assertNotNull(usernameSelected,"Username not found");
 
         System.out.println(usernameSelected);
     }
