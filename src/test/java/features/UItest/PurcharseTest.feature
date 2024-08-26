@@ -6,8 +6,12 @@ Feature: PurcharseTest
     Given the user is at the SwagLabs home page
     When the user logs in
     And the user validates that is logged in
-    And the user add an <item> to the marketCar
-    And the user continues the purcharse
+    And the user add an <Item> to the marketCar
+    And the user continues the purchase
+    And the user provides the personal information purchase
+      | Name | LastName | zip   |
+      | test | testLAst | 06584 |
+    And the user checkout the overview Info of the order
     Then the user logs out
     Examples:
       | Item                              |

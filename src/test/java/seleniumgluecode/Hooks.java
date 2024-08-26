@@ -11,14 +11,17 @@ public class Hooks {
     private static WebDriver driver;
     private DriverManager driverManager;
     private  static  int numberOfCase= 0;
+    private static ScenarioContext scenarioContext;
     @Before
     public void setup(){
         numberOfCase++;
+        scenarioContext = new ScenarioContext();
         System.out.println("Se esta ejecutando el escenario nro ="+numberOfCase);
         driverManager = DriverManagerFactory.getManager(DriverType.CHROME);
         driver = driverManager.getDriver();
         driver.get("https://www.saucedemo.com");
         driver.manage().window().maximize();
+
     }
     @After
     public void tearDown()
@@ -35,5 +38,8 @@ public class Hooks {
         // Obtiene el nombre del step actual
         String stepName = scenario.getName();
         System.out.println("Step: " + stepName);
+    }
+    public static ScenarioContext getScenarioContext() {
+        return scenarioContext;
     }
 }

@@ -5,6 +5,6 @@ Feature: LoginTest
 
     Given the user is at the SwagLabs home page
     When the user logs in
-    Then the user validates that is logged in
+    Then And the user validates that is logged in
     And the user logs out
 
