@@ -12,6 +12,9 @@ Feature: PurcharseTest
       | Name | LastName | zip   |
       | test | testLAst | 06584 |
     And the user checkout the overview Info of the order
+      | CardInfo  | DeliveryInfo |
+      | SauceCard | Pony Express |
+    Then the user completes the order
     Then the user logs out
     Examples:
       | Item                              |

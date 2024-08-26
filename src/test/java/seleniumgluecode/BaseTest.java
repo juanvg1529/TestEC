@@ -12,5 +12,6 @@ public class BaseTest {
     protected CartPage cartPage = new CartPage(driver);
     protected CheckoutPageStepOne checkoutPageStepOne = new CheckoutPageStepOne(driver);
     protected CheckoutPageStepTwo checkoutPageStepTwo = new CheckoutPageStepTwo(driver);
+    protected CheckoutCompletePage checkoutCompletePage = new CheckoutCompletePage(driver);
     protected ScenarioContext scenarioContext = Hooks.getScenarioContext();
 }

@@ -59,6 +59,16 @@ public class BasePage {
         }
     }
 
+    public boolean isNotDisplayed(By element)throws Exception{
+        try {
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+            wait.until(ExpectedConditions.invisibilityOfElementLocated(element));
+            return true;
+        }catch (Exception ex){
+            throw  new Exception("Element isn't displayed" + element);
+        }
+    }
+
     /***
      *
      * @param element = Receives a WebEelement

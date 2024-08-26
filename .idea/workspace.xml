@@ -5,19 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4e576a6f-c3bb-4e12-81e0-56367416f521" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/pom/CheckoutPageStepOne.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pom/CheckoutPageStepTwo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/seleniumgluecode/ScenarioContext.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/features/UItest/LoginTest.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/UItest/LoginTest.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/features/UItest/PurcharseTest.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/UItest/PurcharseTest.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pom/CartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pom/CartPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pom/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pom/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pom/CheckoutCompletePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pom/CheckoutCompletePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pom/CheckoutPage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pom/InventoryPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pom/InventoryPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pom/CheckoutPageStepTwo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pom/CheckoutPageStepTwo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/seleniumgluecode/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/seleniumgluecode/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/seleniumgluecode/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/seleniumgluecode/Hooks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/seleniumgluecode/LogintTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/seleniumgluecode/LoginTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/seleniumgluecode/PurcharseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/seleniumgluecode/PurcharseTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -81,7 +74,7 @@
       <recent name="pom" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Feature: PurcharseTest">
+  <component name="RunManager" selected="Cucumber Java.Feature: LoginTest">
     <configuration name="Feature: LoginTest" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/features/UItest/LoginTest.feature" />
@@ -180,8 +173,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Cucumber Java.Feature: PurcharseTest" />
         <item itemvalue="Cucumber Java.Feature: LoginTest" />
+        <item itemvalue="Cucumber Java.Feature: PurcharseTest" />
         <item itemvalue="Cucumber Java.Scenario: The user log in into the SwagLab web page ant then logout" />
         <item itemvalue="Cucumber Java.Feature: UI_Testing_EC_Cargo_Test" />
         <item itemvalue="Cucumber Java.Feature: UItest" />
@@ -217,18 +210,6 @@
           <url>file://$PROJECT_DIR$/src/test/java/runner/browserManager/FirefoxDriverManager.java</url>
           <line>8</line>
           <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <condition expression="&quot;Cucumber+&quot;!=null" />
-          <url>file://$PROJECT_DIR$/src/test/java/seleniumgluecode/PurcharseTest.java</url>
-          <line>40</line>
-          <option name="timeStamp" value="37" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <condition expression="&quot;Cucumber+&quot;!=null" />
-          <url>file://$PROJECT_DIR$/src/test/java/seleniumgluecode/PurcharseTest.java</url>
-          <line>38</line>
-          <option name="timeStamp" value="39" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="tzatziki.gherkin.step">
           <url>file://$PROJECT_DIR$/src/test/java/features/UItest/LoginTest.feature</url>
