@@ -58,6 +58,12 @@
     </dependency>
 
     <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-core</artifactId>
+      <version>7.16.1</version>
+    </dependency>
+
+    <dependency>
       <groupId>com.vimalselvam</groupId>
       <artifactId>cucumber-extentsreport</artifactId>
       <version>3.0.2</version>

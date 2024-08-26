@@ -1,7 +1,5 @@
 package seleniumgluecode;
-import io.cucumber.java.After;
-import io.cucumber.java.AfterAll;
-import io.cucumber.java.Before;
+import io.cucumber.java.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import runner.browserManager.DriverManager;
@@ -30,5 +28,12 @@ public class Hooks {
     }
     public static WebDriver getDriver(){
         return driver;
+    }
+
+    @BeforeStep
+    public void beforeStep(Scenario scenario) {
+        // Obtiene el nombre del step actual
+        String stepName = scenario.getName();
+        System.out.println("Step: " + stepName);
     }
 }

@@ -5,9 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4e576a6f-c3bb-4e12-81e0-56367416f521" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/features/UItest/LoginTest.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pom/BasePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/seleniumgluecode/LogintTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/features/UItest/UI_Testing_EC_Cargo_Test.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pom/InventoryPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pom/InventoryPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pom/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pom/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/runner/TestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runner/TestRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/seleniumgluecode/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/seleniumgluecode/BaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/seleniumgluecode/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/seleniumgluecode/Hooks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/seleniumgluecode/UI_Testing_EC_Cargo_Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/seleniumgluecode/UI_Testing_EC_Cargo_Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/seleniumgluecode/UI_Testing_EC_Cargo_Test.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,10 +208,35 @@
           <line>8</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <condition expression="&quot;Cucumber+&quot;!=null" />
+          <url>file://$PROJECT_DIR$/src/test/java/seleniumgluecode/LogintTest.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/pom/InventoryPage.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <condition expression="&quot;Cucumber+&quot;!=null" />
+          <url>file://$PROJECT_DIR$/src/test/java/seleniumgluecode/LogintTest.java</url>
+          <line>40</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="tzatziki.gherkin.step">
+          <url>file://$PROJECT_DIR$/src/test/java/features/UItest/LoginTest.feature</url>
+          <line>8</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
-      <inline-watch fileUrl="file://$PROJECT_DIR$/src/test/java/seleniumgluecode/UI_Testing_EC_Cargo_Test.java" line="39">
+      <inline-watch fileUrl="file://$PROJECT_DIR$/src/test/java/seleniumgluecode/LogintTest.java" line="39">
         <watch expression="password" language="JAVA" />
       </inline-watch>
     </watches-manager>
