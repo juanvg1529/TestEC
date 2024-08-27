@@ -1,11 +1,10 @@
-package seleniumgluecode;
-import io.cucumber.core.backend.TestCaseState;
+package seleniumgluecode.Common;
 import io.cucumber.java.*;
 import org.openqa.selenium.WebDriver;
-import io.cucumber.plugin.event.PickleStepTestStep;
 import runner.browserManager.DriverManager;
 import runner.browserManager.DriverManagerFactory;
 import runner.browserManager.DriverType;
+import seleniumgluecode.Common.ScenarioContext;
 
 
 public class Hooks {

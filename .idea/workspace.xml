@@ -5,9 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4e576a6f-c3bb-4e12-81e0-56367416f521" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/features/APITest/PetShopAPITest.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/seleniumgluecode/APItest/APITest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pom/InventoryPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pom/InventoryPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/seleniumgluecode/PurcharseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/seleniumgluecode/PurcharseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/seleniumgluecode/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/seleniumgluecode/Common/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/seleniumgluecode/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/seleniumgluecode/Common/Hooks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/seleniumgluecode/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/seleniumgluecode/UItest/LoginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/seleniumgluecode/PurcharseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/seleniumgluecode/UItest/PurcharseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/seleniumgluecode/ScenarioContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/seleniumgluecode/Common/ScenarioContext.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +41,11 @@
         <option name="url" value="https://github.com/juanvg1529/TestEC.git" />
       </UrlAndAccount>
     </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$MAVEN_REPOSITORY$/io/cucumber/cucumber-core/7.16.1/cucumber-core-7.16.1.jar!/io/cucumber/core/runner/ExecutionMode.class" root0="SKIP_INSPECTION" />
+    <setting file="jar://$MAVEN_REPOSITORY$/io/cucumber/cucumber-core/7.16.1/cucumber-core-7.16.1.jar!/io/cucumber/core/runner/TestStep.class" root0="SKIP_INSPECTION" />
+    <setting file="jar://$MAVEN_REPOSITORY$/io/cucumber/cucumber-java/7.16.1/cucumber-java-7.16.1.jar!/io/cucumber/java/Invoker.class" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -70,7 +81,7 @@
       <recent name="pom" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Feature: FilteredPurchase">
+  <component name="RunManager" selected="Cucumber Java.Feature: LoginTest">
     <configuration name="Feature: FilteredPurchase" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/features/UItest/FilteredPurchase.feature" />
@@ -128,14 +139,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Feature: PurcharseTest" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Feature: PetShopAPITest" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/features/UItest/PurcharseTest.feature" />
-      <option name="GLUE" value="seleniumgluecode" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/features/APITest/PetShopAPITest.feature" />
+      <option name="GLUE" value="seleniumgluecode.Common" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="ecCargoTest" />
       <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
-      <option name="SUGGESTED_NAME" value="Feature: PurcharseTest" />
+      <option name="SUGGESTED_NAME" value="Feature: PetShopAPITest" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -169,11 +180,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Cucumber Java.Feature: LoginTest" />
+        <item itemvalue="Cucumber Java.Feature: PetShopAPITest" />
         <item itemvalue="Cucumber Java.Feature: FilteredPurchase" />
         <item itemvalue="Cucumber Java.Feature: MultiplePurchaseTest" />
         <item itemvalue="Cucumber Java.Scenario: The user buy multiple items at the SwagLab web page ant then logout" />
-        <item itemvalue="Cucumber Java.Feature: LoginTest" />
-        <item itemvalue="Cucumber Java.Feature: PurcharseTest" />
       </list>
     </recent_temporary>
   </component>
@@ -209,7 +220,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <condition expression="&quot;Cucumber+&quot;!=null" />
-          <url>file://$PROJECT_DIR$/src/test/java/seleniumgluecode/LoginTest.java</url>
+          <url>file://$PROJECT_DIR$/src/test/java/seleniumgluecode/UItest/LoginTest.java</url>
           <line>17</line>
           <properties>
             <option name="lambda-ordinal" value="-1" />
@@ -218,13 +229,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <condition expression="&quot;Cucumber+&quot;!=null" />
-          <url>file://$PROJECT_DIR$/src/test/java/seleniumgluecode/PurcharseTest.java</url>
+          <url>file://$PROJECT_DIR$/src/test/java/seleniumgluecode/UItest/PurcharseTest.java</url>
           <line>48</line>
           <option name="timeStamp" value="68" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <condition expression="&quot;Cucumber+&quot;!=null" />
-          <url>file://$PROJECT_DIR$/src/test/java/seleniumgluecode/PurcharseTest.java</url>
+          <url>file://$PROJECT_DIR$/src/test/java/seleniumgluecode/UItest/PurcharseTest.java</url>
           <line>69</line>
           <properties>
             <option name="lambda-ordinal" value="-1" />
@@ -238,13 +249,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <condition expression="&quot;Cucumber+&quot;!=null" />
-          <url>file://$PROJECT_DIR$/src/test/java/seleniumgluecode/PurcharseTest.java</url>
+          <url>file://$PROJECT_DIR$/src/test/java/seleniumgluecode/UItest/PurcharseTest.java</url>
           <line>152</line>
           <option name="timeStamp" value="76" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <condition expression="&quot;Cucumber+&quot;!=null" />
-          <url>file://$PROJECT_DIR$/src/test/java/seleniumgluecode/PurcharseTest.java</url>
+          <url>file://$PROJECT_DIR$/src/test/java/seleniumgluecode/UItest/PurcharseTest.java</url>
           <line>154</line>
           <option name="timeStamp" value="78" />
         </line-breakpoint>
@@ -260,13 +271,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <condition expression="&quot;Cucumber+&quot;!=null" />
-          <url>file://$PROJECT_DIR$/src/test/java/seleniumgluecode/PurcharseTest.java</url>
+          <url>file://$PROJECT_DIR$/src/test/java/seleniumgluecode/UItest/PurcharseTest.java</url>
           <line>165</line>
           <option name="timeStamp" value="81" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <condition expression="&quot;Cucumber+&quot;!=null" />
-          <url>file://$PROJECT_DIR$/src/test/java/seleniumgluecode/PurcharseTest.java</url>
+          <url>file://$PROJECT_DIR$/src/test/java/seleniumgluecode/UItest/PurcharseTest.java</url>
           <line>163</line>
           <option name="timeStamp" value="83" />
         </line-breakpoint>
@@ -303,7 +314,7 @@
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
-      <inline-watch fileUrl="file://$PROJECT_DIR$/src/test/java/seleniumgluecode/LoginTest.java" line="39">
+      <inline-watch fileUrl="file://$PROJECT_DIR$/src/test/java/seleniumgluecode/UItest/LoginTest.java" line="39">
         <watch expression="password" language="JAVA" />
       </inline-watch>
     </watches-manager>
