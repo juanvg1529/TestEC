@@ -2,11 +2,16 @@
 
 Use jdk 15 
 add both Maven and JAVA enviroment variables
-1
+
+
 ![img.png](img.png)
 
+
 add user variables 
+
+
 ![img_1.png](img_1.png)
+
 
 befora that, install maven
 
