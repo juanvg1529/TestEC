@@ -76,7 +76,7 @@ public class APITest extends BaseTest {
         Assert.assertEquals(petName,petObtained.getName());
         Assert.assertEquals(petID,petObtained.getId().toString());
         Assert.assertEquals(getTag,petObtained.getTags()[0].getName());
-        printConsole("USER CREATES A NEW PET "+"|"+petObtained.getName()+"|"+petObtained.getTags()[0].getName()+"|");
+        printConsole("USER GETS THE NEW PET "+"|"+petObtained.getName()+"|"+petObtained.getTags()[0].getName()+"|");
     }
 
     @When("the user updates an existing pet")
@@ -100,7 +100,7 @@ public class APITest extends BaseTest {
             Assert.assertEquals(updatedPet.getName(), petAfterUpdate.getName());
             Assert.assertEquals(updatedPet.getStatus(), petAfterUpdate.getStatus());
             Assert.assertEquals(updatedPet.getTags()[0].getName(),petAfterUpdate.getTags()[0].getName());
-            printConsole("USER CREATES A NEW PET "+"|"+updatedPet.getName()+"|"+updatedPet.getTags()[0].getName()+"|");
+            printConsole("USER UPDATES A NEW PET "+"|"+updatedPet.getName()+"|"+updatedPet.getTags()[0].getName()+"|");
         });
 
     }
