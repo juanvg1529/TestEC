@@ -1,4 +1,4 @@
-package seleniumgluecode;
+package seleniumgluecode.Common;
 
 import java.util.HashMap;
 import java.util.Map;

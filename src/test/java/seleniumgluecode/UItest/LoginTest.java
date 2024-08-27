@@ -1,14 +1,15 @@
-package seleniumgluecode;
+package seleniumgluecode.UItest;
 
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import seleniumgluecode.Common.BaseTest;
 
 import java.util.List;
 
-public class LoginTest extends BaseTest{
+public class LoginTest extends BaseTest {
 
 
 

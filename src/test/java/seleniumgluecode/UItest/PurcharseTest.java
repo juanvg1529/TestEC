@@ -1,18 +1,17 @@
-package seleniumgluecode;
+package seleniumgluecode.UItest;
 
 import io.cucumber.datatable.DataTable;
-import io.cucumber.java.bs.A;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
 import org.junit.Assert;
+import seleniumgluecode.Common.BaseTest;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.NoSuchElementException;
 
-public class PurcharseTest  extends BaseTest{
+public class PurcharseTest  extends BaseTest {
 
     @And("the user add an {} to the marketCar")
     public void theUserAddAnToTheMarketCar(String itemMarket) throws Throwable {
