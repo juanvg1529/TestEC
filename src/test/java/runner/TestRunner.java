@@ -12,6 +12,7 @@ import static io.cucumber.junit.CucumberOptions.SnippetType.CAMELCASE;
 @CucumberOptions(
         features = {"src/test/java/features/APITest","src/test/java/features/UITest"},
         glue = {"seleniumgluecode","seleniumgluecode.APIStepDefinition"},
+        plugin = {"json:target/cucumber.json"},
         snippets = CAMELCASE
 )
 
