@@ -1,3 +1,4 @@
+@UI
 Feature: LoginTest
   As user I want to interact all over the marvel developer page
 

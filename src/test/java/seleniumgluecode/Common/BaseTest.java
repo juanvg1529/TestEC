@@ -1,5 +1,7 @@
 package seleniumgluecode.Common;
 
+import APIresources.APIRepositories;
+import io.restassured.RestAssured;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import pom.*;
@@ -13,5 +15,12 @@ public class BaseTest {
     protected CheckoutPageStepOne checkoutPageStepOne = new CheckoutPageStepOne(driver);
     protected CheckoutPageStepTwo checkoutPageStepTwo = new CheckoutPageStepTwo(driver);
     protected CheckoutCompletePage checkoutCompletePage = new CheckoutCompletePage(driver);
+    protected APIRepositories apiRepositories = new APIRepositories();
     protected ScenarioContext scenarioContext = Hooks.getScenarioContext();
+    public void printConsole(String text){
+        System.out.println(text);
+
+    }
+
+
 }

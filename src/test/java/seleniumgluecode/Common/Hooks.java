@@ -1,5 +1,7 @@
 package seleniumgluecode.Common;
+import APIresources.APIRepositories;
 import io.cucumber.java.*;
+import io.restassured.RestAssured;
 import org.openqa.selenium.WebDriver;
 import runner.browserManager.DriverManager;
 import runner.browserManager.DriverManagerFactory;
@@ -13,20 +15,25 @@ public class Hooks {
     private  static  int numberOfCase= 0;
     private static ScenarioContext scenarioContext;
     @Before
-    public void setup(){
-        numberOfCase++;
+    public void setup(Scenario scenario){
         scenarioContext = new ScenarioContext();
-        driverManager = DriverManagerFactory.getManager(DriverType.CHROME);
-        driver = driverManager.getDriver();
-        driver.get("https://www.saucedemo.com");
-        driver.manage().window().maximize();
-
+        APIRepositories apiRepositories = new APIRepositories();
+        RestAssured.baseURI = apiRepositories.getURL();
+        if (scenario.getSourceTagNames().contains("@UI")) {
+            numberOfCase++;
+            driverManager = DriverManagerFactory.getManager(DriverType.CHROME);
+            driver = driverManager.getDriver();
+            driver.get("https://www.saucedemo.com");
+            driver.manage().window().maximize();
+        }
     }
     @After
-    public void tearDown()
+    public void tearDown(Scenario scenario)
     {
-        System.out.println("El escenario nro = "+numberOfCase+" se ejecuto correctamente");
-        driverManager.quitDriver();
+        if (scenario.getSourceTagNames().contains("@UI")) {
+            System.out.println("El escenario nro = " + numberOfCase + " se ejecuto correctamente");
+            driverManager.quitDriver();
+        }
     }
     public static WebDriver getDriver(){
         return driver;
