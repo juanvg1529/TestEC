@@ -1,3 +1,4 @@
+@API
 Feature: PetShopAPITest
 
   Scenario: The user interacts with the shop through an API of a pet shop
