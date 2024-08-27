@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.devtools.v125.domsnapshot.model.StringIndex;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.Select;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -67,6 +68,11 @@ public class InventoryPage extends BasePage {
     public CartPage goToCheckoutItems() throws Exception{
         this.click(cartElement);
         return new CartPage(driver);
+    }
+    public void selectOptionFromDropdown(String optionText) {
+        WebElement dropdownElement = driver.findElement(By.cssSelector(".product_sort_container"));
+        Select select = new Select(dropdownElement);
+        select.selectByVisibleText(optionText);
     }
 
 

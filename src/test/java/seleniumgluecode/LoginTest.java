@@ -24,7 +24,7 @@ public class LoginTest extends BaseTest{
         List<String> usernames =loginPage.getAllUserNames();
         String usernameSelected = usernames.stream().filter(username->username.contains("user")).findAny().orElseThrow(() ->new RuntimeException("Not user found"));
         Assert.assertNotNull(usernameSelected,"Username not found");
-        loginPage.printConsole("the username selected is ="+usernameSelected);
+        loginPage.printConsole("the username selected is = "+usernameSelected);
         var password= loginPage.getPassword();
         loginPage.printConsole("The password is = "+password);
 
@@ -40,14 +40,12 @@ public class LoginTest extends BaseTest{
     }
     @When("And the user validates that is logged in")
     public void whenTheUserValidatesThatIsLoggedIn() throws Throwable {
-        loginPage.printConsole("Element " + loginPage.loginTitle);
         inventoryPage.inventoryDisplayed();
         Assert.assertTrue("InventoryPage is not displayed", inventoryPage.inventoryDisplayed());
         Assert.assertTrue("Cart not displayed", inventoryPage.getValidationInventaryPage());
     }
     @Then("the user validates that is logged in")
     public void thenTheUserValidatesThatIsLoggedIn() throws Throwable{
-        loginPage.printConsole("Element "+loginPage.loginTitle);
         inventoryPage.inventoryDisplayed();
         Assert.assertTrue("InventoryPage is not displayed",inventoryPage.inventoryDisplayed());
         Assert.assertTrue("Cart not displayed",inventoryPage.getValidationInventaryPage());

@@ -13,6 +13,8 @@ public class CartPage extends BasePage{
     private By cartItem= By.className("cart_item");
     private By inventoryTitleMarket= By.className("inventory_item_name");
     private  By checkoutButton = By.id("checkout");
+    private By removeItemButton = By.xpath(".//button[contains(@data-test, 'remove')]");
+    private By shoppingBadge = By.className("shopping_cart_badge");
     public CartPage(WebDriver driver){
         super(driver);
     }
@@ -47,6 +49,21 @@ public class CartPage extends BasePage{
     public CheckoutPageStepOne clickCheckoutbutton() throws Exception{
         this.click(checkoutButton);
         return  new CheckoutPageStepOne(driver);
+    }
+    public void removeItem( String itemName) throws Exception{
+        String itemXPath = "//div[@data-test='inventory-item']//div[@data-test='inventory-item-name' and text()='" + itemName + "']/ancestor::div[@data-test='inventory-item']";
+        WebElement itemContainer = driver.findElement(By.xpath(itemXPath));
+        WebElement addToCartButton = itemContainer.findElement(removeItemButton);
+        this.click(addToCartButton);
+    }
+    public boolean checkNumberOfItemsToBuy(String number) throws Exception{
+        boolean value= false;
+        this.isDisplayed(shoppingBadge);
+        var valueOfShoppingCart = this.getText(shoppingBadge);
+        if(valueOfShoppingCart.contains(number)){
+            value =true;
+        }
+        return value;
     }
 
 }

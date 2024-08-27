@@ -10,6 +10,7 @@ import org.junit.Assert;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.NoSuchElementException;
 
 public class PurcharseTest  extends BaseTest{
 
@@ -25,12 +26,39 @@ public class PurcharseTest  extends BaseTest{
     @And("the user continues the purchase")
     public void theUserContinuesThePurcharse() throws Throwable{
         List<Boolean> validation = new ArrayList<>();
-       var itemToBuy = scenarioContext.getContext("itemToBuy");
-       var listItems= cartPage.checkoutItemsToBuy(itemToBuy.toString());
-        for (var item:listItems){
-            if(item.equals(itemToBuy)){
-                validation.add(true);
+        var itemToBuy = scenarioContext.getContext("itemToBuy");
+        if(itemToBuy != null) {
+            var listItems = cartPage.checkoutItemsToBuy(itemToBuy.toString());
+            if(listItems != null && !listItems.isEmpty()) {
+                if(itemToBuy instanceof List<?>) {
+                    List<?> itemsToBuyList = (List<?>) itemToBuy;
+                    for (var itemInCart : listItems) {
+                        boolean found = false;
+                        for (var itemToCheck : itemsToBuyList) {
+                            if(itemInCart.equals(itemToCheck)) {
+                                validation.add(true);
+                                found = true;
+                                break;
+                            }
+                        }
+                        if (!found) {
+                            validation.add(false);
+                        }
+                    }
+                } else {
+                    for (var itemInCart : listItems) {
+                        if(itemInCart.equals(itemToBuy)) {
+                            validation.add(true);
+                        } else {
+                            validation.add(false);
+                        }
+                    }
+                }
+            } else {
+                inventoryPage.printConsole("La lista de ítems está vacía o es nula.");
             }
+        } else {
+            inventoryPage.printConsole("El ítem a comprar es nulo.");
         }
         Assert.assertTrue("Not all of the item are present",cartPage.areAllTrue(validation));
 
@@ -78,5 +106,54 @@ public class PurcharseTest  extends BaseTest{
         var loginPage=  checkoutCompletePage.clickBackHomeButton();
         Assert.assertTrue( "Driver not at he Inventory Page",loginPage.inventoryDisplayed());
         loginPage.printConsole("PURCHASE COMPLETED");
+    }
+
+    @And("the user add Items to the marketCar")
+    public void theUserAddItemsToTheMarketCar(DataTable table) throws Throwable{
+        List<Map<String,String>> rows = table.asMaps(String.class,String.class);
+        List <String> itemsNamesList= new ArrayList<>();
+        rows.forEach(row->{
+            String getItem= row.get("Item");
+            itemsNamesList.add(getItem);
+            try {
+                inventoryPage.addItemToCart(getItem);
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+        });
+        if(inventoryPage.isItemAddedTotheCart()){
+            cartPage=inventoryPage.goToCheckoutItems();
+            scenarioContext.setContext("itemToBuy",itemsNamesList);
+        }
+
+    }
+    @And("the user removes one Item")
+    public void theUserRemovesOneItem(DataTable table) throws Throwable {
+
+        var itemToBuy = scenarioContext.getContext("itemToBuy");
+        List<Map<String,String>> rows = table.asMaps(String.class,String.class);
+        if(itemToBuy instanceof List<?>) {
+            List<String> itemList = (List<String>) itemToBuy;
+            var selectedItem= itemList.stream().findAny().orElseThrow(() -> new NoSuchElementException("No item found in the list"));
+            cartPage.removeItem(selectedItem);
+        }
+        rows.forEach(row->{
+            var valueNumberOfItems= row.get("Number Of Items to Buy");
+            try {
+                Assert.assertTrue(cartPage.checkNumberOfItemsToBuy(valueNumberOfItems));
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+        });
+
+    }
+
+    @And("the user filters the WebPage")
+    public void theUserFilterTheWebPage() throws Throwable{
+        
+    }
+
+    @And("the user selects the item after filtering")
+    public void theUserSelectsTheItemAfterFiltering() throws Throwable {
     }
 }
