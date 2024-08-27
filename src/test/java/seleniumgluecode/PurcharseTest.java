@@ -149,11 +149,23 @@ public class PurcharseTest  extends BaseTest{
     }
 
     @And("the user filters the WebPage")
-    public void theUserFilterTheWebPage() throws Throwable{
-        
+    public void theUserFilterTheWebPage(DataTable table) throws Throwable{
+        List<Map<String,String>> rows = table.asMaps(String.class,String.class);
+        rows.forEach(row->{
+            String valueFilter =row.get("Filter");
+            inventoryPage.selectOptionFromDropdown(valueFilter);
+
+
+        });
     }
 
     @And("the user selects the item after filtering")
     public void theUserSelectsTheItemAfterFiltering() throws Throwable {
+        String itemSelect= inventoryPage.displayItemInformation().get(1);
+        inventoryPage.addItemToCart(itemSelect);
+        if(inventoryPage.isItemAddedTotheCart()){
+            cartPage=inventoryPage.goToCheckoutItems();
+            scenarioContext.setContext("itemToBuy",itemSelect);
+        }
     }
 }

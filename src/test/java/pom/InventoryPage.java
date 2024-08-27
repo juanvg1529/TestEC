@@ -3,10 +3,12 @@ package pom;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.devtools.v125.domsnapshot.model.StringIndex;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,10 +26,12 @@ public class InventoryPage extends BasePage {
     private WebElement inventoryPageValidation;
      private By logoutField = By.id("logout_sidebar_link");
      private By inventoryItemMarket= By.className("inventory_item");
-     private By inventoryTitleMarket= By.className("inventory_item_name");
+     private By inventoryItemTitleMarket = By.className("inventory_item_name");
+     private By inventoryItemDescription=  By.className("inventory_item_desc");
      private By addButon= By.xpath(".//button[contains(@data-test, 'add-to-cart')]");
      private By shoppingBadge = By.className("shopping_cart_badge");
      private By cartItem= By.className("cart_item");
+     private By filterOptionElement= By.cssSelector(".product_sort_container");
 
 
     public boolean inventoryDisplayed() throws Exception{
@@ -48,7 +52,7 @@ public class InventoryPage extends BasePage {
        List<WebElement> itemsMarket= driver.findElements(inventoryItemMarket);
         String productNameSelected= null;
         for(WebElement element:itemsMarket){
-         String productName=element.findElement(inventoryTitleMarket).getText();
+         String productName=element.findElement(inventoryItemTitleMarket).getText();
             if( itemToBuy.contains(productName)){
                 this.addItemToCart(productName);
                 this.printConsole("Product Added "+productName);
@@ -70,9 +74,26 @@ public class InventoryPage extends BasePage {
         return new CartPage(driver);
     }
     public void selectOptionFromDropdown(String optionText) {
-        WebElement dropdownElement = driver.findElement(By.cssSelector(".product_sort_container"));
+        WebElement dropdownElement = driver.findElement(filterOptionElement);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.presenceOfElementLocated( filterOptionElement)).isDisplayed();
         Select select = new Select(dropdownElement);
         select.selectByVisibleText(optionText);
+    }
+    public List<String> displayItemInformation() throws Throwable{
+        List<String> namesItems = new ArrayList<>();
+        List<WebElement> itemsMarket= driver.findElements(inventoryItemMarket);
+        String productNameSelected= null;
+        for(WebElement element:itemsMarket) {
+            String productName = element.findElement(inventoryItemTitleMarket).getText();
+            String productDescription = element.findElement(inventoryItemDescription).getText();
+            namesItems.add(productName);
+            this.printConsole("Product Name =>"+productName);
+            this.printConsole("----------------------------------------");
+            this.printConsole("Desc \n "+productDescription);
+            this.printConsole("----------------------------------------");
+        }
+        return  namesItems;
     }
 
 
