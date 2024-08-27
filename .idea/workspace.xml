@@ -4,23 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4e576a6f-c3bb-4e12-81e0-56367416f521" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/APIresources/APIRepositories.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/APIresources/Models/Category.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/APIresources/Models/Pet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/APIresources/Models/Tag.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/seleniumgluecode/APIStepDefinition/APITest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/features/APITest/PetShopAPITest.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/APITest/PetShopAPITest.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/features/UItest/FilteredPurchase.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/UItest/FilteredPurchase.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/features/UItest/LoginTest.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/UItest/LoginTest.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/features/UItest/MultiplePurchaseTest.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/UItest/MultiplePurchaseTest.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/features/UItest/PurcharseTest.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/UItest/PurcharseTest.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/runner/TestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runner/TestRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/seleniumgluecode/APItest/APITest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/seleniumgluecode/Common/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/seleniumgluecode/Common/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/seleniumgluecode/Common/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/seleniumgluecode/Common/Hooks.java" afterDir="false" />
-    </list>
+    <list default="true" id="4e576a6f-c3bb-4e12-81e0-56367416f521" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
