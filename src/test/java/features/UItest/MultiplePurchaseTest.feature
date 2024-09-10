@@ -1,7 +1,7 @@
 @UI
 Feature: MultiplePurchaseTest
 
-
+  @Reggresion
   Scenario: The user buy multiple items at the SwagLab web page ant then logout
 
     Given the user is at the SwagLabs home page

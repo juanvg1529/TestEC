@@ -1,12 +1,14 @@
 @UI
+
 Feature: MultiplePurchaseTest
 
-
+  Background:
+  @Reggresion
   Scenario: The user buy an item after Filtering at the SwagLab web page ant then logout
 
     Given the user is at the SwagLabs home page
     When the user logs in
-    And the user validates that is logged in
+   Then the user validates that is logged in
     And the user filters the WebPage
       | Filter        |
       | Name (Z to A) |

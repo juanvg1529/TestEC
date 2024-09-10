@@ -1,7 +1,7 @@
 @UI
 Feature: PurcharseTest
   As user I want to interact all over the marvel developer page
-
+  @Reggresion
   Scenario Outline: The user buy one item the SwagLab web page ant then logout
 
     Given the user is at the SwagLabs home page

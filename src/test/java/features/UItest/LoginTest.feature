@@ -1,7 +1,7 @@
 @UI
 Feature: LoginTest
   As user I want to interact all over the marvel developer page
-
+  @Reggresion
   Scenario: The user log in into the SwagLab web page ant then logout
 
     Given the user is at the SwagLabs home page
